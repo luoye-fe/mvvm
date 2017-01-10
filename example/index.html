@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="app">
+		<input type="text" name="">
+		<p>{{text}}</p>
+	</div>
+	<script type="text/javascript" src="../dist/mvvm.js"></script>
+	<script type="text/javascript">
+		var demo = new MVVM({
+			el: '#app',
+			data: {
+				text: "before",
+				arr: [{
+					a: 123
+				}, '123', {
+					a: {
+						v: 123
+					}
+				}]
+			},
+			render(h) {
+				return h('div', {}, [
+					h('span', {}, [this.text])
+				]);
+			}
+		});
+		console.log(demo);
+	</script>
+</body>
+
+</html>
