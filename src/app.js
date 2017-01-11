@@ -1,5 +1,5 @@
 import { isHtmlElement } from './utils.js';
-import { observer, watch } from './observer.js';
+import { observer, watch } from './observer/observer.js';
 import VNode from './vnode.js';
 
 class MVVM {

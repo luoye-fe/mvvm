@@ -15,7 +15,7 @@ var isHtmlElement = function isHtmlElement(obj) {
 };
 
 var checkType = function checkType(value) {
-	return Object.prototype.toString.call(value).match(/\[object (.*)\]/)[1];
+	return Object.prototype.toString.call(value).match(/\[object (.*)]/)[1];
 };
 var isObject = function isObject(value) {
 	return checkType(value) === 'Object';
@@ -43,6 +43,7 @@ var Dep = function () {
 	}, {
 		key: "notify",
 		value: function notify() {
+			console.log(this.subs);
 			this.subs.forEach(function (cb) {
 				return cb();
 			});

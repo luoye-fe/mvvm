@@ -6,6 +6,7 @@ export default class Dep {
 		this.subs.push(sub);
 	}
 	notify() {
+		console.log(this.subs);
 		this.subs.forEach(cb => cb());
 	}
 };

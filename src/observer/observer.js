@@ -1,5 +1,5 @@
 import Dep from './dep.js';
-import { isObject, isArray } from './utils.js';
+import { isObject, isArray } from '../utils.js';
 
 export const observer = function(value) {
 	if (!isObject(value) && !isArray(value)) return;

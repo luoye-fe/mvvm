@@ -9,7 +9,7 @@ export const isHtmlElement = obj => {
 };
 
 export const checkType = value => {
-	return Object.prototype.toString.call(value).match(/\[object (.*)\]/)[1];
+	return Object.prototype.toString.call(value).match(/\[object (.*)]/)[1];
 };
 export const isObject = value => {
 	return checkType(value) === 'Object';
